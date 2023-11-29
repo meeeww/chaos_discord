@@ -1,0 +1,4861 @@
+[
+    {
+        "id": "Uy2aCOptWH",
+        "active": true,
+        "info": {
+            "title": "Registro de Comandos",
+            "description": "",
+            "thumbnail": ""
+        },
+        "blocks": [
+            {
+                "name": "register_slash_commands",
+                "inputs": {},
+                "options": {
+                    "text": "{\n  \"name\": \"creategame\",\n  \"description\": \"Crea una nueva partida\"\n},\n{\n  \"name\": \"startgame\",\n  \"description\": \"Empieza la partida actual y pone su cronometro en 00:00\"\n},\n{\n  \"name\": \"resumegame\",\n  \"description\": \"Reinicia el contador de partida despues de una pausa.\"\n},\n{\n  \"name\": \"pausegame\",\n  \"description\": \"Pausa la partida activa. Puedes poner sus minutos y segundos para setearlo\",\n  \"options\": [\n    {\n      \"type\": 4,\n      \"name\": \"minutos\",\n      \"description\": \"Minuto actual al pausar el game\"\n    },\n    {\n      \"type\": 4,\n      \"name\": \"segundos\",\n      \"description\": \"Segundo actual al pausar el game\"\n    }\n  ]\n}\n"
+                },
+                "outputs": {},
+                "info": {
+                    "x": 27,
+                    "y": 20,
+                    "z": 0,
+                    "width": 1166,
+                    "height": 727,
+                    "color": ""
+                }
+            },
+            {
+                "name": "discord_commands_manager_dependency",
+                "inputs": {},
+                "options": {},
+                "outputs": {},
+                "info": {
+                    "x": 1233,
+                    "y": 204,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            }
+        ],
+        "notes": []
+    },
+    {
+        "id": "7P7HywWfGW",
+        "active": true,
+        "info": {
+            "title": "/creategame",
+            "description": "",
+            "thumbnail": ""
+        },
+        "blocks": [
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "33Ag2nAXcg",
+                    "sub": "12SVHExAjm",
+                    "group": "Sg5IMs6okx",
+                    "value": "EeZiYwMawC"
+                },
+                "options": {
+                    "type": "slash",
+                    "id": "creategame",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "MBoAnc25PV"
+                    ],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [
+                        "WbsU9CGrmz"
+                    ],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 60,
+                    "y": 78,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_list",
+                "inputs": {
+                    "action": "MBoAnc25PV"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "jYr0lAVPQw",
+                        "JIAskyeWpa"
+                    ],
+                    "list": [
+                        "SxEOQ7z9ml"
+                    ]
+                },
+                "info": {
+                    "x": 686,
+                    "y": 108,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal_input",
+                "inputs": {
+                    "action": "JIAskyeWpa",
+                    "style": "RuOXO6Z0Ay",
+                    "id": "FGXbKLxRlD",
+                    "label": "HAe8Byn90N",
+                    "maxlength": "NLMKHtPzSs",
+                    "minlength": "mWKsn3tJDX",
+                    "placeholder": "BYEz7EX9wr",
+                    "prefill": "VKtiWRZHeK",
+                    "required": "08OsyXbOgS"
+                },
+                "options": {
+                    "style": "short",
+                    "id": "equipo1",
+                    "label": "Lado Azul",
+                    "maxlength": "",
+                    "minlength": "",
+                    "placeholder": "Equipo Azul",
+                    "prefill": "",
+                    "required": "true"
+                },
+                "outputs": {
+                    "action": [
+                        "RuVqdsLSmi"
+                    ],
+                    "textfield": [
+                        "g69u6NYL7w",
+                        "5rKXgDurVz"
+                    ]
+                },
+                "info": {
+                    "x": 103,
+                    "y": 502,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal_input",
+                "inputs": {
+                    "action": "qDB7YYTcuz",
+                    "style": "PUohaGmX5h",
+                    "id": "h6oofFDNxb",
+                    "label": "sk8Wvu27gp",
+                    "maxlength": "Pxslo9jAXg",
+                    "minlength": "qv2lEuNOJE",
+                    "placeholder": "O9PEz3m6fd",
+                    "prefill": "0H74bVHmrs",
+                    "required": "TGTGEMwCRP"
+                },
+                "options": {
+                    "style": "short",
+                    "id": "equipo2",
+                    "label": "Lado Rojo",
+                    "maxlength": "",
+                    "minlength": "",
+                    "placeholder": "Equipo Rojo",
+                    "prefill": "",
+                    "required": "true"
+                },
+                "outputs": {
+                    "action": [
+                        "VbbJVDeAlv"
+                    ],
+                    "textfield": [
+                        "Xbfxxncv5f",
+                        "AZ9ksM9vHY"
+                    ]
+                },
+                "info": {
+                    "x": 98,
+                    "y": 871,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal_input",
+                "inputs": {
+                    "action": "XTtnqb5Nfr",
+                    "style": "tiW6oaWXyP",
+                    "id": "GRFnw44Sm9",
+                    "label": "JzuwZl9zJm",
+                    "maxlength": "XwI8eUZSPg",
+                    "minlength": "nkeie55V7W",
+                    "placeholder": "uL5lhdlNhl",
+                    "prefill": "W0GhWMoHu9",
+                    "required": "yjibqHRs2H"
+                },
+                "options": {
+                    "style": "short",
+                    "id": "fase",
+                    "label": "Nombre de la Ronda / Jornada",
+                    "maxlength": "",
+                    "minlength": "",
+                    "placeholder": "Jornada 1 / Semifinal",
+                    "prefill": "",
+                    "required": "true"
+                },
+                "outputs": {
+                    "action": [
+                        "9Liz06d67G"
+                    ],
+                    "textfield": [
+                        "VrT0x1qOzy",
+                        "Iud59pBoVW"
+                    ]
+                },
+                "info": {
+                    "x": 94,
+                    "y": 1194,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal",
+                "inputs": {
+                    "action": "ZxyfpkyhAu",
+                    "interaction": "WbsU9CGrmz",
+                    "customid": "3Y1D56mbd5",
+                    "title": "3aJQcGPvkM",
+                    "inputs": "IelqyjZO6q"
+                },
+                "options": {
+                    "customid": "infopartido",
+                    "title": "Info del Partido"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 1420,
+                    "y": 168,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "add_item_to_list",
+                "inputs": {
+                    "action": "RuVqdsLSmi",
+                    "list": "SxEOQ7z9ml",
+                    "item": "g69u6NYL7w",
+                    "custom_position": "T9qMXcIXWA"
+                },
+                "options": {
+                    "position_type": "first"
+                },
+                "outputs": {
+                    "action": [
+                        "tEo5N46zYP",
+                        "qDB7YYTcuz"
+                    ],
+                    "list": [
+                        "T65RmbtGmO"
+                    ]
+                },
+                "info": {
+                    "x": 748,
+                    "y": 348,
+                    "z": 0,
+                    "width": 0,
+                    "height": 52,
+                    "color": ""
+                }
+            },
+            {
+                "name": "add_item_to_list",
+                "inputs": {
+                    "action": "VbbJVDeAlv",
+                    "list": "T65RmbtGmO",
+                    "item": "Xbfxxncv5f",
+                    "custom_position": "IbZBENn91p"
+                },
+                "options": {
+                    "position_type": "last"
+                },
+                "outputs": {
+                    "action": [
+                        "n7SJr9HxaQ",
+                        "XTtnqb5Nfr"
+                    ],
+                    "list": [
+                        "dOMNcWSmfg"
+                    ]
+                },
+                "info": {
+                    "x": 673,
+                    "y": 808,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "add_item_to_list",
+                "inputs": {
+                    "action": "9Liz06d67G",
+                    "list": "dOMNcWSmfg",
+                    "item": "VrT0x1qOzy",
+                    "custom_position": "4MikrMKxIa"
+                },
+                "options": {
+                    "position_type": "last"
+                },
+                "outputs": {
+                    "action": [
+                        "186CSy5QbW",
+                        "b9QbDmDBhb"
+                    ],
+                    "list": [
+                        "54nqUR3waG"
+                    ]
+                },
+                "info": {
+                    "x": 726,
+                    "y": 1179,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal_input",
+                "inputs": {
+                    "action": "b9QbDmDBhb",
+                    "style": "z1LQtwlTJ1",
+                    "id": "GyG9S8g0bN",
+                    "label": "0JiDDKHlKo",
+                    "maxlength": "hvpmQb05WO",
+                    "minlength": "cUCQ3wevh8",
+                    "placeholder": "remusiJRha",
+                    "prefill": "ouDkaJZZ8z",
+                    "required": "ITNwFGHdst"
+                },
+                "options": {
+                    "style": "short",
+                    "id": "fecha",
+                    "label": "Fecha por Defecto",
+                    "maxlength": "",
+                    "minlength": "",
+                    "placeholder": "01/01/2000",
+                    "prefill": "",
+                    "required": "false"
+                },
+                "outputs": {
+                    "action": [
+                        "REXRyWDtWJ"
+                    ],
+                    "textfield": [
+                        "ihhD83AxaU",
+                        "3f6Q96p3co"
+                    ]
+                },
+                "info": {
+                    "x": 92,
+                    "y": 1539,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "add_item_to_list",
+                "inputs": {
+                    "action": "REXRyWDtWJ",
+                    "list": "54nqUR3waG",
+                    "item": "ihhD83AxaU",
+                    "custom_position": "CWFBL0QD9H"
+                },
+                "options": {
+                    "position_type": "last"
+                },
+                "outputs": {
+                    "action": [
+                        "yXInoPDQaI",
+                        "bQmNw7xzNZ"
+                    ],
+                    "list": [
+                        "jzItfO6pAh"
+                    ]
+                },
+                "info": {
+                    "x": 752,
+                    "y": 1511,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_modal_input",
+                "inputs": {
+                    "action": "bQmNw7xzNZ",
+                    "style": "VW6CMUmN6d",
+                    "id": "GUBB3rD4aj",
+                    "label": "fagvLgI2cF",
+                    "maxlength": "AiQxLpQP8l",
+                    "minlength": "MJB6UXZzAf",
+                    "placeholder": "1yBkR27Vbj",
+                    "prefill": "YeVRVM9j8t",
+                    "required": "PYwxTmuFVy"
+                },
+                "options": {
+                    "style": "short",
+                    "id": "hora",
+                    "label": "Hora por Defecto",
+                    "maxlength": "",
+                    "minlength": "",
+                    "placeholder": "00:00",
+                    "prefill": "",
+                    "required": "false"
+                },
+                "outputs": {
+                    "action": [
+                        "D5SCgleKyf"
+                    ],
+                    "textfield": [
+                        "SccATrBeY6",
+                        "2H5q7WQCvF"
+                    ]
+                },
+                "info": {
+                    "x": 105,
+                    "y": 1881,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "add_item_to_list",
+                "inputs": {
+                    "action": "D5SCgleKyf",
+                    "list": "jzItfO6pAh",
+                    "item": "SccATrBeY6",
+                    "custom_position": "sJyspAvbRA"
+                },
+                "options": {
+                    "position_type": "last"
+                },
+                "outputs": {
+                    "action": [
+                        "oaJhnJhKwz",
+                        "ZxyfpkyhAu"
+                    ],
+                    "list": [
+                        "IelqyjZO6q"
+                    ]
+                },
+                "info": {
+                    "x": 1094,
+                    "y": 1848,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "dgt8CQdpV5",
+                    "sub": "73sFygs0bv",
+                    "group": "7frAoFRKMW",
+                    "value": "ioWV2Qlicm"
+                },
+                "options": {
+                    "type": "modal",
+                    "id": "infopartido",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "WC83gCA9XE",
+                        "z7rp0NWNdL",
+                        "5Uc90qEp6M",
+                        "IvKaCqXBI4"
+                    ],
+                    "user": [],
+                    "member": [],
+                    "server": [
+                        "gG2sx0ZWmP",
+                        "3XUjUTDGfh",
+                        "Q5becvAwFH",
+                        "NVX7deORaO",
+                        "rZeJPNfj6w",
+                        "KBix2HjcRh",
+                        "0LpBY24D2X",
+                        "r7wVIKzb03",
+                        "Eo0XnQqwC6",
+                        "ArYCTM6Jpx",
+                        "aDWy7Ndrog",
+                        "7BrFTxnagF",
+                        "3PFV5ypy5O",
+                        "pWSP0D1rRQ",
+                        "lC6JDPICni",
+                        "S3UiOlk2ga",
+                        "2LYUJVsF0E",
+                        "MBQxVH5zZj"
+                    ],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [
+                        "jAIFwJUBxT",
+                        "aiRKTj4amX",
+                        "J24Wh52CEV",
+                        "mtSR4qsuSq",
+                        "eyGZftjArl",
+                        "bGyUEtS5LV",
+                        "opCDzNlEok",
+                        "kkvuvACc09"
+                    ],
+                    "args": [
+                        "fNILKvC0EQ",
+                        "0HcB2Vi0Ab",
+                        "bNydCklDOB",
+                        "5x1G9qPzKh",
+                        "Xj5BAylDdZ",
+                        "ZNpqAoWK0a",
+                        "qZBtmnqen8",
+                        "huV3Yx3Kfj"
+                    ],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 2157,
+                    "y": 115,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_category",
+                "inputs": {
+                    "action": "Tp10aBjzXA",
+                    "server": "gG2sx0ZWmP",
+                    "category_name": "zoyxQoOlrW",
+                    "category_position": "PLXBTguM35",
+                    "reason": "LkV1xt6qWk"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "GuE2AcSUaO"
+                    ],
+                    "category": [
+                        "sZM05P18zG",
+                        "5KzZYmmLn1",
+                        "0eoAymxpj1",
+                        "8nTCPXiiJ7",
+                        "Ons3eZgwFo",
+                        "1T9F0CexVE",
+                        "fTCBLk5xDz",
+                        "EXgal6LdRC",
+                        "s1jyXvy0KO",
+                        "5w3LRnmX7P",
+                        "HKssHkwAfJ"
+                    ]
+                },
+                "info": {
+                    "x": 3783,
+                    "y": 176,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "QYm5IJdKmz",
+                    "interaction": "jAIFwJUBxT",
+                    "customid": "tvBgO6yB3z"
+                },
+                "options": {
+                    "customid": "equipo1"
+                },
+                "outputs": {
+                    "action": [
+                        "o7CZn4o9VH"
+                    ],
+                    "value": [
+                        "HMIvfmIT6H",
+                        "9IsabixKZS",
+                        "FytDQwYNos"
+                    ]
+                },
+                "info": {
+                    "x": 2770,
+                    "y": 108,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "merge_texts_advanced",
+                "inputs": {
+                    "action": "PtMUzYmt4j",
+                    "text1": "HMIvfmIT6H",
+                    "text2": "gWKEatBGOf",
+                    "text3": "1LlRHquYoe"
+                },
+                "options": {
+                    "text": "${text1} VS ${text2}"
+                },
+                "outputs": {
+                    "action": [
+                        "Tp10aBjzXA"
+                    ],
+                    "text": [
+                        "zoyxQoOlrW"
+                    ]
+                },
+                "info": {
+                    "x": 3288,
+                    "y": 383,
+                    "z": 0,
+                    "width": 0,
+                    "height": 131,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "o7CZn4o9VH",
+                    "interaction": "aiRKTj4amX",
+                    "customid": "rqI5vuvPmO"
+                },
+                "options": {
+                    "customid": "equipo2"
+                },
+                "outputs": {
+                    "action": [
+                        "PtMUzYmt4j"
+                    ],
+                    "value": [
+                        "gWKEatBGOf",
+                        "QebYcEYB6H",
+                        "71oIqAOJzC"
+                    ]
+                },
+                "info": {
+                    "x": 2766,
+                    "y": 383,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "9LQsQXwmOc",
+                    "server": "3XUjUTDGfh",
+                    "channel_name": "6JgZEKcCCU",
+                    "channel_topic": "YTBM8D1WhL",
+                    "channel_position": "IKJUiKzbQl",
+                    "channel_nsfw": "c9xqNTcQAw",
+                    "channel_slowmode": "KClPyvu2pB",
+                    "channel_category": "sZM05P18zG",
+                    "reason": "Da2rplN01t"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "IxGTfvC3cz"
+                    ],
+                    "text_channel": [
+                        "28s6AcvwDT",
+                        "K0XuCX35vw",
+                        "ImMNptHOix",
+                        "aSqTj0Sqjd"
+                    ]
+                },
+                "info": {
+                    "x": 2565,
+                    "y": 686,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_9x",
+                "inputs": {},
+                "options": {
+                    "text1": "info-partido",
+                    "text2": "chat-general",
+                    "text3": "coach-azul",
+                    "text4": "coach-rojo",
+                    "text5": "registro-partido",
+                    "text6": "panel-arbitro",
+                    "text7": "chat-arbitros-partidos",
+                    "text8": "Partido Creado",
+                    "text9": ""
+                },
+                "outputs": {
+                    "text1": [
+                        "6JgZEKcCCU"
+                    ],
+                    "text2": [
+                        "HjL4ngXSI7"
+                    ],
+                    "text3": [
+                        "WnwPkUqYfJ"
+                    ],
+                    "text4": [
+                        "hILWmLV8C6"
+                    ],
+                    "text5": [
+                        "SDxNLkdZTX"
+                    ],
+                    "text6": [
+                        "lehxhmANx5"
+                    ],
+                    "text7": [
+                        "PHuSsGY5Z1"
+                    ],
+                    "text8": [
+                        "1VfWfYaVn9"
+                    ],
+                    "text9": [
+                        "jjriDR29lq"
+                    ]
+                },
+                "info": {
+                    "x": 2127,
+                    "y": 663,
+                    "z": 0,
+                    "width": 0,
+                    "height": 491,
+                    "color": ""
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "GuE2AcSUaO",
+                    "server": "Q5becvAwFH",
+                    "search_value": "sgZj2CeiTG"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "ND48PkbHT5"
+                    ],
+                    "role": [
+                        "FvnSQCGcGV",
+                        "JQ2CpQBhUb",
+                        "MdI2lZ312H",
+                        "eJeg3bSbli",
+                        "Ju79XI50Q5",
+                        "N3vFbMNqXS",
+                        "jlo83FvzNp",
+                        "CleuiEI8Ii",
+                        "3z51D6yhxV"
+                    ]
+                },
+                "info": {
+                    "x": 4111,
+                    "y": 71,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "#00fbff"
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "ND48PkbHT5",
+                    "server": "NVX7deORaO",
+                    "search_value": "cGFj2p6WWE"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "YHiwIn5DHN"
+                    ],
+                    "role": []
+                },
+                "info": {
+                    "x": 4629,
+                    "y": 70,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "#00ccff"
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "YHiwIn5DHN",
+                    "server": "rZeJPNfj6w",
+                    "search_value": "YNqYQGDRhc"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "gnpa1i7mRu"
+                    ],
+                    "role": [
+                        "uJLoNC0Fmu",
+                        "0MOFnLcs54"
+                    ]
+                },
+                "info": {
+                    "x": 5121,
+                    "y": 77,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "#ffbb00"
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "gnpa1i7mRu",
+                    "server": "KBix2HjcRh",
+                    "search_value": "mS0oW7PI8g"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "Pq8eEV9EAk"
+                    ],
+                    "role": [
+                        "GmwKKXIEAK",
+                        "vocw7lZCOH"
+                    ]
+                },
+                "info": {
+                    "x": 4106,
+                    "y": 361,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "#eeff00"
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "Pq8eEV9EAk",
+                    "server": "0LpBY24D2X",
+                    "search_value": "4uYUonHyqs"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "bJZGEHOCl4"
+                    ],
+                    "role": [
+                        "nKFf4KZVvp",
+                        "f7ApG3x7aY"
+                    ]
+                },
+                "info": {
+                    "x": 4599,
+                    "y": 356,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "#737500"
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "IxGTfvC3cz",
+                    "server": "r7wVIKzb03",
+                    "channel_name": "HjL4ngXSI7",
+                    "channel_topic": "xvAE43nyWG",
+                    "channel_position": "HHzC5l3rtL",
+                    "channel_nsfw": "f7rcaAnp7C",
+                    "channel_slowmode": "9KxINxY2Qy",
+                    "channel_category": "5KzZYmmLn1",
+                    "reason": "ahbeiLpuOR"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "Y7etGMLCUS"
+                    ],
+                    "text_channel": [
+                        "PdQ4zrGmoH",
+                        "TqTtoDQv0u",
+                        "0zG6MJ4HWh"
+                    ]
+                },
+                "info": {
+                    "x": 2953,
+                    "y": 693,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "Y7etGMLCUS",
+                    "server": "Eo0XnQqwC6",
+                    "channel_name": "WnwPkUqYfJ",
+                    "channel_topic": "sfsu6VUgGn",
+                    "channel_position": "ku1fJIoBG2",
+                    "channel_nsfw": "430H6do4Z0",
+                    "channel_slowmode": "krw7myZfT6",
+                    "channel_category": "0eoAymxpj1",
+                    "reason": "9XfHTbwEP5"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "a14Iym8KY6"
+                    ],
+                    "text_channel": [
+                        "ja6nntTuNW",
+                        "Zh1BhQA1mA",
+                        "7jbUe40QH9"
+                    ]
+                },
+                "info": {
+                    "x": 3352,
+                    "y": 698,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "a14Iym8KY6",
+                    "server": "ArYCTM6Jpx",
+                    "channel_name": "hILWmLV8C6",
+                    "channel_topic": "aW7zVMVQCw",
+                    "channel_position": "74RbJMgHor",
+                    "channel_nsfw": "MP1wn43W8p",
+                    "channel_slowmode": "MbTLFMtpJ3",
+                    "channel_category": "8nTCPXiiJ7",
+                    "reason": "kc3tO6TPjD"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "kkcM54LRbx"
+                    ],
+                    "text_channel": [
+                        "1YYByf7HWa",
+                        "3a110opd1J",
+                        "8ZQJFhy4O2"
+                    ]
+                },
+                "info": {
+                    "x": 3716,
+                    "y": 705,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "Ocaiw23p4y",
+                    "server": "7BrFTxnagF",
+                    "channel_name": "lehxhmANx5",
+                    "channel_topic": "wBXqOfUCBX",
+                    "channel_position": "bAucuEWftZ",
+                    "channel_nsfw": "hPlrvY4MKQ",
+                    "channel_slowmode": "baz4xeCE5a",
+                    "channel_category": "1T9F0CexVE",
+                    "reason": "3SScOyZagF"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "HyV70kPHMt"
+                    ],
+                    "text_channel": [
+                        "UzX0sJVSfe",
+                        "zhCHIHnx92"
+                    ]
+                },
+                "info": {
+                    "x": 4438,
+                    "y": 715,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "kkcM54LRbx",
+                    "server": "aDWy7Ndrog",
+                    "channel_name": "SDxNLkdZTX",
+                    "channel_topic": "c2IOqjOTFC",
+                    "channel_position": "mliLoLCSeR",
+                    "channel_nsfw": "2Yk8F7dQd8",
+                    "channel_slowmode": "4Xy5pOZ6Lx",
+                    "channel_category": "Ons3eZgwFo",
+                    "reason": "bASubceDSB"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "Ocaiw23p4y"
+                    ],
+                    "text_channel": [
+                        "3diARxh3dJ",
+                        "kvB858vQ80",
+                        "QpPviXnneP"
+                    ]
+                },
+                "info": {
+                    "x": 4082,
+                    "y": 713,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_text_channel",
+                "inputs": {
+                    "action": "HyV70kPHMt",
+                    "server": "3PFV5ypy5O",
+                    "channel_name": "PHuSsGY5Z1",
+                    "channel_topic": "d1fYqQ89LA",
+                    "channel_position": "PrBy7pwv1g",
+                    "channel_nsfw": "BHu5HVIM2q",
+                    "channel_slowmode": "eG0zXhKQAR",
+                    "channel_category": "fTCBLk5xDz",
+                    "reason": "iNyuftTNxA"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "DabqokfVY2"
+                    ],
+                    "text_channel": [
+                        "7KG8xmAyWn",
+                        "UFXRMJNjrD",
+                        "X0CYcIqgIl"
+                    ]
+                },
+                "info": {
+                    "x": 4781,
+                    "y": 720,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "bJZGEHOCl4",
+                    "server": "pWSP0D1rRQ",
+                    "search_value": "9IsabixKZS"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "o9ioL1tm4M"
+                    ],
+                    "role": [
+                        "JERLx6Tucz",
+                        "vkgz5TEXa9",
+                        "ZFmKd12z7V",
+                        "Ri0FHRgpPu",
+                        "inRhO8V9NW"
+                    ]
+                },
+                "info": {
+                    "x": 5095,
+                    "y": 356,
+                    "z": 0,
+                    "width": 0,
+                    "height": 142,
+                    "color": ""
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "o9ioL1tm4M",
+                    "server": "lC6JDPICni",
+                    "search_value": "QebYcEYB6H"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "aWhQAEFyjx"
+                    ],
+                    "role": [
+                        "UkteOlOiEb",
+                        "LLupBb6kbI",
+                        "LP9YAG5flU",
+                        "Pz1w9A0tif",
+                        "7mtB2pC4NZ"
+                    ]
+                },
+                "info": {
+                    "x": 5648,
+                    "y": 80,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_voice_channel",
+                "inputs": {
+                    "action": "DabqokfVY2",
+                    "server": "S3UiOlk2ga",
+                    "channel_name": "FytDQwYNos",
+                    "channel_position": "4Q20JQSsN6",
+                    "channel_user_limit": "TN0xUq45yr",
+                    "channel_bitrate": "SO6O3wY3Fm",
+                    "channel_category": "EXgal6LdRC",
+                    "reason": "kfBnDq1u8F"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "ozfaFJRKCQ"
+                    ],
+                    "voice_channel": [
+                        "GfVrrC2c7A",
+                        "PscCBAAph0",
+                        "8SAaGQS9k3",
+                        "PtT2XNV59F",
+                        "RIDWG3IJFu",
+                        "W7wiuCOCEv",
+                        "19xSMtFUSR",
+                        "ig69FfEXDx"
+                    ]
+                },
+                "info": {
+                    "x": 5193,
+                    "y": 737,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_voice_channel",
+                "inputs": {
+                    "action": "ozfaFJRKCQ",
+                    "server": "2LYUJVsF0E",
+                    "channel_name": "71oIqAOJzC",
+                    "channel_position": "l3Il4MXXRa",
+                    "channel_user_limit": "BP0YO5VasO",
+                    "channel_bitrate": "c1r7UlozTv",
+                    "channel_category": "s1jyXvy0KO",
+                    "reason": "vrtZjm7LEv"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "tKMtQQsx9L"
+                    ],
+                    "voice_channel": [
+                        "HidA3sdydU",
+                        "66YbuWVMQm",
+                        "n9PNdTqT2q",
+                        "m7VN7U2ebV",
+                        "62fjf3tGJQ",
+                        "ZgpQfpUWFE",
+                        "4XDFmQXQFf",
+                        "giEfgm2K2Y"
+                    ]
+                },
+                "info": {
+                    "x": 5587,
+                    "y": 734,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "find_role",
+                "inputs": {
+                    "action": "aWhQAEFyjx",
+                    "server": "MBQxVH5zZj",
+                    "search_value": "i2VjkUphAC"
+                },
+                "options": {
+                    "find_role_by": "name",
+                    "search_value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "9LQsQXwmOc"
+                    ],
+                    "role": [
+                        "FYskzUw4VA",
+                        "lPGoNk0IJc"
+                    ]
+                },
+                "info": {
+                    "x": 5662,
+                    "y": 350,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_6x",
+                "inputs": {},
+                "options": {
+                    "text1": "🔭 | Árbitro",
+                    "text2": "👑 | Presidente",
+                    "text3": "👑 | Sub-Presidente",
+                    "text4": "👨‍💼 | Staff Equipo",
+                    "text5": "🎮 | Jugador",
+                    "text6": "🎬 | Realizador"
+                },
+                "outputs": {
+                    "text1": [
+                        "sgZj2CeiTG"
+                    ],
+                    "text2": [
+                        "mS0oW7PI8g"
+                    ],
+                    "text3": [
+                        "4uYUonHyqs"
+                    ],
+                    "text4": [
+                        "YNqYQGDRhc"
+                    ],
+                    "text5": [
+                        "cGFj2p6WWE"
+                    ],
+                    "text6": [
+                        "i2VjkUphAC"
+                    ]
+                },
+                "info": {
+                    "x": 6299,
+                    "y": 84,
+                    "z": 0,
+                    "width": 0,
+                    "height": 445,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "2iFJPi4jYi",
+                    "target1": "28s6AcvwDT",
+                    "target2": "xRKXbNTOLF",
+                    "reason": "YLV6gUZTXG"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "deny",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "gN0LADH5na"
+                    ]
+                },
+                "info": {
+                    "x": 2134,
+                    "y": 1627,
+                    "z": 0,
+                    "width": 0,
+                    "height": 233,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "gN0LADH5na",
+                    "target1": "K0XuCX35vw",
+                    "target2": "FvnSQCGcGV",
+                    "reason": "EXmY1ybw2T"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "allow",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "T8B5vy85zG"
+                    ]
+                },
+                "info": {
+                    "x": 2626,
+                    "y": 1628,
+                    "z": 0,
+                    "width": 0,
+                    "height": 216,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "T8B5vy85zG",
+                    "target1": "ImMNptHOix",
+                    "target2": "JERLx6Tucz",
+                    "reason": "I5OKzdylgI"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "deny",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "3yDQHX9RDm"
+                    ]
+                },
+                "info": {
+                    "x": 2125,
+                    "y": 1898,
+                    "z": 0,
+                    "width": 0,
+                    "height": 48,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "3yDQHX9RDm",
+                    "target1": "aSqTj0Sqjd",
+                    "target2": "UkteOlOiEb",
+                    "reason": "sXGF1FtGId"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "deny",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "EfKTkhedSe"
+                    ]
+                },
+                "info": {
+                    "x": 2630,
+                    "y": 1896,
+                    "z": 0,
+                    "width": 0,
+                    "height": 95,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "EfKTkhedSe"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "yhQ8m9f4M6"
+                    ],
+                    "permissions": [
+                        "FImkmFKpIi",
+                        "HMTPNSnrpX",
+                        "TqCEoFqkgu",
+                        "aH9Qge4KO9"
+                    ]
+                },
+                "info": {
+                    "x": 3201,
+                    "y": 1653,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "yhQ8m9f4M6"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "deny",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "y85ueD7vQu"
+                    ],
+                    "permissions": [
+                        "O4hXzy9Sfo",
+                        "LyKJw5d3Qk",
+                        "TNlB1VDBl3",
+                        "o0G3oByFgV",
+                        "80bZzR9zr6",
+                        "DfyZy0CO4E",
+                        "3Eb4beUg9z"
+                    ]
+                },
+                "info": {
+                    "x": 3194,
+                    "y": 1884,
+                    "z": 0,
+                    "width": 0,
+                    "height": 170,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "y85ueD7vQu",
+                    "target1": "ja6nntTuNW",
+                    "target2": "lZ0DiLTFk0",
+                    "permissions": "FImkmFKpIi",
+                    "reason": "rnGUj4r3Ef"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "d0m1MDaxIQ"
+                    ]
+                },
+                "info": {
+                    "x": 3691,
+                    "y": 1622,
+                    "z": 0,
+                    "width": 0,
+                    "height": 147,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "d0m1MDaxIQ",
+                    "target1": "Zh1BhQA1mA",
+                    "target2": "vkgz5TEXa9",
+                    "permissions": "O4hXzy9Sfo",
+                    "reason": "6oLE3bkntZ"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "KcAjmYb69V"
+                    ]
+                },
+                "info": {
+                    "x": 4220,
+                    "y": 1626,
+                    "z": 0,
+                    "width": 0,
+                    "height": 162,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "2TkioGkan6",
+                    "target1": "1YYByf7HWa",
+                    "target2": "To4QbHam44",
+                    "permissions": "HMTPNSnrpX",
+                    "reason": "9ATN4LFkaz"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "vVqF5gljSy"
+                    ]
+                },
+                "info": {
+                    "x": 3685,
+                    "y": 1934,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "vVqF5gljSy",
+                    "target1": "3a110opd1J",
+                    "target2": "Pz1w9A0tif",
+                    "permissions": "LyKJw5d3Qk",
+                    "reason": "j7Xry8EM1P"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "OVUoYqtt3a"
+                    ]
+                },
+                "info": {
+                    "x": 4203,
+                    "y": 1937,
+                    "z": 0,
+                    "width": 0,
+                    "height": 209,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "KcAjmYb69V",
+                    "target1": "7jbUe40QH9",
+                    "target2": "JQ2CpQBhUb",
+                    "permissions": "TNlB1VDBl3",
+                    "reason": "Euq1EzGvoL"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "2TkioGkan6"
+                    ]
+                },
+                "info": {
+                    "x": 4719,
+                    "y": 1624,
+                    "z": 0,
+                    "width": 0,
+                    "height": 174,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "OVUoYqtt3a",
+                    "target1": "8ZQJFhy4O2",
+                    "target2": "MdI2lZ312H",
+                    "permissions": "o0G3oByFgV",
+                    "reason": "eUjaEPx8td"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "AIUliCduFP"
+                    ]
+                },
+                "info": {
+                    "x": 4763,
+                    "y": 1929,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "AIUliCduFP",
+                    "target1": "UzX0sJVSfe",
+                    "target2": "W95QNER9h0",
+                    "permissions": "TqCEoFqkgu",
+                    "reason": "iwbTvyUNaC"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "GM97B57mPe"
+                    ]
+                },
+                "info": {
+                    "x": 3677,
+                    "y": 2239,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "GM97B57mPe",
+                    "target1": "zhCHIHnx92",
+                    "target2": "eJeg3bSbli",
+                    "permissions": "3Eb4beUg9z",
+                    "reason": "BXIV5hAEzz"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "DwDzNifxhL"
+                    ]
+                },
+                "info": {
+                    "x": 4178,
+                    "y": 2239,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "av2DsIIGJF"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "7SzxFWvzL4"
+                    ],
+                    "permissions": [
+                        "Ypn2xQF35L"
+                    ]
+                },
+                "info": {
+                    "x": 5830,
+                    "y": 1672,
+                    "z": 0,
+                    "width": 0,
+                    "height": 10,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "7SzxFWvzL4"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "allow",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "W1Dzaqevi1"
+                    ],
+                    "permissions": [
+                        "QCfteO0Gc0",
+                        "5X1WkjVcuC"
+                    ]
+                },
+                "info": {
+                    "x": 5828,
+                    "y": 1880,
+                    "z": 0,
+                    "width": 0,
+                    "height": 46,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "DwDzNifxhL",
+                    "target1": "3diARxh3dJ",
+                    "target2": "WKiffgftYl",
+                    "permissions": "aH9Qge4KO9",
+                    "reason": "GB9uTSkqOS"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "wAwS9c3FpX"
+                    ]
+                },
+                "info": {
+                    "x": 3682,
+                    "y": 2548,
+                    "z": 0,
+                    "width": 373,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "wAwS9c3FpX",
+                    "target1": "kvB858vQ80",
+                    "target2": "Ju79XI50Q5",
+                    "permissions": "DfyZy0CO4E",
+                    "reason": "pri39kRF8V"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "GGHim23CGS"
+                    ]
+                },
+                "info": {
+                    "x": 4173,
+                    "y": 2551,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "GGHim23CGS",
+                    "target1": "QpPviXnneP",
+                    "target2": "lPGoNk0IJc",
+                    "permissions": "80bZzR9zr6",
+                    "reason": "7b7gxftdMN"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "av2DsIIGJF"
+                    ]
+                },
+                "info": {
+                    "x": 4656,
+                    "y": 2554,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "W1Dzaqevi1",
+                    "target1": "7KG8xmAyWn",
+                    "target2": "lZWdF64fSU",
+                    "permissions": "Ypn2xQF35L",
+                    "reason": "58wEvusMfb"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "WupINsMpCA"
+                    ]
+                },
+                "info": {
+                    "x": 6374,
+                    "y": 1634,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "WupINsMpCA",
+                    "target1": "UFXRMJNjrD",
+                    "target2": "N3vFbMNqXS",
+                    "permissions": "QCfteO0Gc0",
+                    "reason": "iQwWvybJff"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "wJ1qXl9pRu"
+                    ]
+                },
+                "info": {
+                    "x": 6368,
+                    "y": 1873,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "number",
+                "inputs": {},
+                "options": {
+                    "number": 7
+                },
+                "outputs": {
+                    "number": [
+                        "TN0xUq45yr",
+                        "BP0YO5VasO"
+                    ]
+                },
+                "info": {
+                    "x": 5952,
+                    "y": 595,
+                    "z": 0,
+                    "width": 107,
+                    "height": 47,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "wJ1qXl9pRu",
+                    "target1": "X0CYcIqgIl",
+                    "target2": "FYskzUw4VA",
+                    "permissions": "5X1WkjVcuC",
+                    "reason": "oaTf8emRo4"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "MIFpBTWF0I"
+                    ]
+                },
+                "info": {
+                    "x": 6091,
+                    "y": 2120,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "MIFpBTWF0I"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "bvgi0dz0gk"
+                    ],
+                    "permissions": [
+                        "dYntbHUs3c",
+                        "Qo9FtRifWy"
+                    ]
+                },
+                "info": {
+                    "x": 6337,
+                    "y": 779,
+                    "z": 0,
+                    "width": 0,
+                    "height": 56,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_permissions",
+                "inputs": {
+                    "action": "bvgi0dz0gk"
+                },
+                "options": {
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "none",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "allow",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "SuQpNSe4j2"
+                    ],
+                    "permissions": [
+                        "83htdiLrKA",
+                        "ptwe504NpL",
+                        "Jw4YbI0tig",
+                        "PjqSB47GWd",
+                        "kshYMufNpH",
+                        "OuZddK6lwG"
+                    ]
+                },
+                "info": {
+                    "x": 6337,
+                    "y": 994,
+                    "z": 0,
+                    "width": 0,
+                    "height": 127,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "ltOkAs0xJ9",
+                    "target1": "GfVrrC2c7A",
+                    "target2": "tPl7ewmquW",
+                    "permissions": "dYntbHUs3c",
+                    "reason": "HlZvG7VFx2"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "l4LrGZcodf"
+                    ]
+                },
+                "info": {
+                    "x": 7233,
+                    "y": 644,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "ppOaOz6QJx",
+                    "target1": "HidA3sdydU",
+                    "target2": "WmZ4DLxxsv",
+                    "permissions": "Qo9FtRifWy",
+                    "reason": "jkxHzMKB5z"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone"
+                },
+                "outputs": {
+                    "action": [
+                        "gKfKOXYm09"
+                    ]
+                },
+                "info": {
+                    "x": 7241,
+                    "y": 1123,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "l4LrGZcodf",
+                    "target1": "PscCBAAph0",
+                    "target2": "0MOFnLcs54",
+                    "permissions": "OuZddK6lwG",
+                    "reason": "EdMIWkxrJo"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "gI6IUDGKZ9"
+                    ]
+                },
+                "info": {
+                    "x": 7743,
+                    "y": 643,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "t2jPxLM78V",
+                    "target1": "PtT2XNV59F",
+                    "target2": "GmwKKXIEAK",
+                    "permissions": "PjqSB47GWd",
+                    "reason": "gsK4AgxNie"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "wRLbeaBNJ2"
+                    ]
+                },
+                "info": {
+                    "x": 8753,
+                    "y": 634,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "gI6IUDGKZ9",
+                    "target1": "8SAaGQS9k3",
+                    "target2": "nKFf4KZVvp",
+                    "permissions": "ptwe504NpL",
+                    "reason": "uri4EXnm7C"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "t2jPxLM78V"
+                    ]
+                },
+                "info": {
+                    "x": 8250,
+                    "y": 645,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "gKfKOXYm09",
+                    "target1": "66YbuWVMQm",
+                    "target2": "uJLoNC0Fmu",
+                    "permissions": "83htdiLrKA",
+                    "reason": "NqAj53zczA"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "LtwDlZAImZ"
+                    ]
+                },
+                "info": {
+                    "x": 7765,
+                    "y": 1135,
+                    "z": 0,
+                    "width": 0,
+                    "height": 209,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "LtwDlZAImZ",
+                    "target1": "n9PNdTqT2q",
+                    "target2": "f7ApG3x7aY",
+                    "permissions": "Jw4YbI0tig",
+                    "reason": "pVqEc2AmWc"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "WG2ICp5tmW"
+                    ]
+                },
+                "info": {
+                    "x": 8273,
+                    "y": 1134,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions",
+                "inputs": {
+                    "action": "WG2ICp5tmW",
+                    "target1": "m7VN7U2ebV",
+                    "target2": "vocw7lZCOH",
+                    "permissions": "kshYMufNpH",
+                    "reason": "09H9V0IZTf"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target"
+                },
+                "outputs": {
+                    "action": [
+                        "yjj4ar6FxD"
+                    ]
+                },
+                "info": {
+                    "x": 8782,
+                    "y": 1128,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "zHyxZ88gS2",
+                    "target1": "RIDWG3IJFu",
+                    "target2": "ZFmKd12z7V",
+                    "reason": "KSAiFTfowq"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "allow",
+                    "speak": "none",
+                    "stream": "allow",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "GNExlXwv7K"
+                    ]
+                },
+                "info": {
+                    "x": 9852,
+                    "y": 638,
+                    "z": 0,
+                    "width": 0,
+                    "height": 51,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "yVqn4rDOtv",
+                    "target1": "62fjf3tGJQ",
+                    "target2": "LLupBb6kbI",
+                    "reason": "7RjeTH97Sx"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "allow",
+                    "speak": "none",
+                    "stream": "allow",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "AFFRlZX4NZ"
+                    ]
+                },
+                "info": {
+                    "x": 9825,
+                    "y": 1132,
+                    "z": 0,
+                    "width": 0,
+                    "height": 155,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "AFFRlZX4NZ",
+                    "target1": "ZgpQfpUWFE",
+                    "target2": "CleuiEI8Ii",
+                    "reason": "lu2pOOgCia"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "allow",
+                    "speak": "none",
+                    "stream": "allow",
+                    "mute_members": "allow",
+                    "deafen_members": "allow",
+                    "move_members": "allow",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "n1t7N7vq8N"
+                    ]
+                },
+                "info": {
+                    "x": 10334,
+                    "y": 1133,
+                    "z": 0,
+                    "width": 0,
+                    "height": 140,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "GNExlXwv7K",
+                    "target1": "W7wiuCOCEv",
+                    "target2": "jlo83FvzNp",
+                    "reason": "VQAVLK1d8H"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "allow",
+                    "speak": "none",
+                    "stream": "allow",
+                    "mute_members": "allow",
+                    "deafen_members": "allow",
+                    "move_members": "allow",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "poEsCGSndg"
+                    ]
+                },
+                "info": {
+                    "x": 10385,
+                    "y": 641,
+                    "z": 0,
+                    "width": 0,
+                    "height": 78,
+                    "color": ""
+                }
+            },
+            {
+                "name": "edit_voice_channel",
+                "inputs": {
+                    "action": "SuQpNSe4j2",
+                    "voice_channel": "19xSMtFUSR",
+                    "channel_name": "oiAS4Iyvjr",
+                    "channel_position": "UX0mLWJh67",
+                    "channel_bitrate": "8mPTC2zK3o",
+                    "channel_user_limit": "KnwYtfoGjf",
+                    "channel_category": "1Gy9MSP6ID",
+                    "channel_permission_synchronization": "j5olMirB4R",
+                    "reason": "zTOHlDp7kZ"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "ltOkAs0xJ9"
+                    ]
+                },
+                "info": {
+                    "x": 6901,
+                    "y": 568,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "edit_voice_channel",
+                "inputs": {
+                    "action": "poEsCGSndg",
+                    "voice_channel": "4XDFmQXQFf",
+                    "channel_name": "Yuc5R1g0DC",
+                    "channel_position": "yeBEC7Fz9W",
+                    "channel_bitrate": "sJ8ch44bTv",
+                    "channel_user_limit": "OPuExfDmg8",
+                    "channel_category": "2dayoWVzCi",
+                    "channel_permission_synchronization": "Ayi9Dg9oEG",
+                    "reason": "HwizN3LPMi"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "ppOaOz6QJx"
+                    ]
+                },
+                "info": {
+                    "x": 6907,
+                    "y": 1037,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "boolean",
+                "inputs": {},
+                "options": {
+                    "boolean_type": "false"
+                },
+                "outputs": {
+                    "boolean": [
+                        "Ayi9Dg9oEG",
+                        "j5olMirB4R"
+                    ]
+                },
+                "info": {
+                    "x": 6428,
+                    "y": 1231,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "yjj4ar6FxD",
+                    "target1": "giEfgm2K2Y",
+                    "target2": "Ri0FHRgpPu",
+                    "reason": "p6q9yxNxi4"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "yVqn4rDOtv"
+                    ]
+                },
+                "info": {
+                    "x": 9311,
+                    "y": 1127,
+                    "z": 0,
+                    "width": 0,
+                    "height": 19,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "wRLbeaBNJ2",
+                    "target1": "ig69FfEXDx",
+                    "target2": "LP9YAG5flU",
+                    "reason": "mnBjRsllQS"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "zHyxZ88gS2"
+                    ]
+                },
+                "info": {
+                    "x": 9268,
+                    "y": 649,
+                    "z": 0,
+                    "width": 0,
+                    "height": 128,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "tKMtQQsx9L",
+                    "target1": "5w3LRnmX7P",
+                    "target2": "Cyhq8veLst",
+                    "reason": "uvHcO6W182"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "gJdiLzh2gL"
+                    ]
+                },
+                "info": {
+                    "x": 2145,
+                    "y": 1256,
+                    "z": 0,
+                    "width": 0,
+                    "height": 279,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "gJdiLzh2gL",
+                    "target1": "HKssHkwAfJ",
+                    "target2": "3z51D6yhxV",
+                    "reason": "w4TaFApSnL"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "1BScCG8HPp"
+                    ]
+                },
+                "info": {
+                    "x": 2672,
+                    "y": 1260,
+                    "z": 0,
+                    "width": 0,
+                    "height": 262,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "iHQ1B7Pi5g",
+                    "target1": "PdQ4zrGmoH",
+                    "target2": "inRhO8V9NW",
+                    "reason": "PmErUiiAkS"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "allow",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "A1vbpogxp2"
+                    ]
+                },
+                "info": {
+                    "x": 3718,
+                    "y": 1274,
+                    "z": 0,
+                    "width": 0,
+                    "height": 263,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "A1vbpogxp2",
+                    "target1": "TqTtoDQv0u",
+                    "target2": "7mtB2pC4NZ",
+                    "reason": "c79X2oJ1bl"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_target",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "allow",
+                    "send_messages": "allow",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "2iFJPi4jYi"
+                    ]
+                },
+                "info": {
+                    "x": 4255,
+                    "y": 1273,
+                    "z": 0,
+                    "width": 0,
+                    "height": 254,
+                    "color": ""
+                }
+            },
+            {
+                "name": "apply_permissions_with_create_permissions",
+                "inputs": {
+                    "action": "1BScCG8HPp",
+                    "target1": "0zG6MJ4HWh",
+                    "target2": "XUrt1wSn1y",
+                    "reason": "hx3BZutG7E"
+                },
+                "options": {
+                    "application_type": "set",
+                    "target_type": "channel_everyone",
+                    "administrator": "none",
+                    "view_audit_log": "none",
+                    "view_guild_insights": "none",
+                    "manage_guild": "none",
+                    "manage_roles": "none",
+                    "manage_channels": "none",
+                    "kick_members": "none",
+                    "ban_members": "none",
+                    "create_instant_invite": "none",
+                    "change_nickname": "none",
+                    "manage_nicknames": "none",
+                    "manage_emojis_and_stickers": "none",
+                    "manage_webhooks": "none",
+                    "view_channel": "deny",
+                    "send_messages": "none",
+                    "send_tts_messages": "none",
+                    "manage_messages": "none",
+                    "embed_links": "none",
+                    "attach_files": "none",
+                    "read_message_history": "none",
+                    "mention_everyone": "none",
+                    "use_external_emojis": "none",
+                    "add_reactions": "none",
+                    "connect": "none",
+                    "speak": "none",
+                    "stream": "none",
+                    "mute_members": "none",
+                    "deafen_members": "none",
+                    "move_members": "none",
+                    "use_vad": "none",
+                    "priority_speaker": "none"
+                },
+                "outputs": {
+                    "action": [
+                        "iHQ1B7Pi5g"
+                    ]
+                },
+                "info": {
+                    "x": 3248,
+                    "y": 1307,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_12x",
+                "inputs": {},
+                "options": {
+                    "text1": "equipo1",
+                    "text2": "equipo2",
+                    "text3": "fase",
+                    "text4": "fecha",
+                    "text5": "hora",
+                    "text6": "formulario",
+                    "text7": "",
+                    "text8": "",
+                    "text9": "",
+                    "text10": "",
+                    "text11": "",
+                    "text12": ""
+                },
+                "outputs": {
+                    "text1": [
+                        "b2vfIPgc8K",
+                        "w5Ff9JHzeZ",
+                        "S2IDcvaIow"
+                    ],
+                    "text2": [
+                        "qTlQN7RPVL",
+                        "ipC1wKFVuQ",
+                        "yFmmmyvtWw"
+                    ],
+                    "text3": [
+                        "hn1NOzIXqk",
+                        "hpbuTX9kwQ",
+                        "E25RLn0NrX"
+                    ],
+                    "text4": [
+                        "2F3Ey724Lh",
+                        "06iLCwS2Go",
+                        "9TLGgOw1ik"
+                    ],
+                    "text5": [
+                        "hqxdNIOJLW",
+                        "y6fapuwo2Z",
+                        "hqt76qcSHX"
+                    ],
+                    "text6": [
+                        "pAvifbErzP",
+                        "r70scADfD1"
+                    ],
+                    "text7": [],
+                    "text8": [],
+                    "text9": [],
+                    "text10": [],
+                    "text11": [],
+                    "text12": []
+                },
+                "info": {
+                    "x": 1912,
+                    "y": 2366,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "KARjaf8npy",
+                    "name": "r70scADfD1",
+                    "value": "JgOBorQl11",
+                    "workspace_index": "kjUe8Dps6h"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "global",
+                    "variable_restriction_type": "all"
+                },
+                "outputs": {
+                    "action": [
+                        "QYm5IJdKmz"
+                    ]
+                },
+                "info": {
+                    "x": 1895,
+                    "y": 2848,
+                    "z": 0,
+                    "width": 0,
+                    "height": 212,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_object_with_properties",
+                "inputs": {
+                    "action": "Y1nIBeeh7S",
+                    "key1": "S2IDcvaIow",
+                    "value1": "N179ohbUIg",
+                    "key2": "yFmmmyvtWw",
+                    "value2": "vo9di1XEd2",
+                    "key3": "E25RLn0NrX",
+                    "value3": "P1qznWXRL2",
+                    "key4": "9TLGgOw1ik",
+                    "value4": "WD4PjIOk9y",
+                    "key5": "hqt76qcSHX",
+                    "value5": "R3n6CMsQVG",
+                    "key6": "4uuO6YsIrf",
+                    "value6": "GJLTdRbPEj"
+                },
+                "options": {
+                    "key1": "",
+                    "value1": "",
+                    "key2": "",
+                    "value2": "",
+                    "key3": "",
+                    "value3": "",
+                    "key4": "",
+                    "value4": "",
+                    "key5": "",
+                    "value5": "",
+                    "key6": "",
+                    "value6": ""
+                },
+                "outputs": {
+                    "action": [
+                        "KARjaf8npy"
+                    ],
+                    "object": [
+                        "JgOBorQl11"
+                    ]
+                },
+                "info": {
+                    "x": 1230,
+                    "y": 2526,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "IvKaCqXBI4",
+                    "interaction": "mtSR4qsuSq",
+                    "customid": "3Yw3OwfgBV"
+                },
+                "options": {
+                    "customid": "equipo1"
+                },
+                "outputs": {
+                    "action": [
+                        "ajIg2jAbfW"
+                    ],
+                    "value": [
+                        "N179ohbUIg"
+                    ]
+                },
+                "info": {
+                    "x": 213,
+                    "y": 2281,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "ajIg2jAbfW",
+                    "interaction": "eyGZftjArl",
+                    "customid": "D55VDWP5oG"
+                },
+                "options": {
+                    "customid": "equipo2"
+                },
+                "outputs": {
+                    "action": [
+                        "YtrtJyBXGo"
+                    ],
+                    "value": [
+                        "vo9di1XEd2"
+                    ]
+                },
+                "info": {
+                    "x": 214,
+                    "y": 2455,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "YtrtJyBXGo",
+                    "interaction": "bGyUEtS5LV",
+                    "customid": "EN6FQJRLFx"
+                },
+                "options": {
+                    "customid": "fase"
+                },
+                "outputs": {
+                    "action": [
+                        "dMV9xOl1T0"
+                    ],
+                    "value": [
+                        "P1qznWXRL2"
+                    ]
+                },
+                "info": {
+                    "x": 217,
+                    "y": 2626,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "dMV9xOl1T0",
+                    "interaction": "opCDzNlEok",
+                    "customid": "6XRJQjjpJx"
+                },
+                "options": {
+                    "customid": "fecha"
+                },
+                "outputs": {
+                    "action": [
+                        "OSiE18QNMu"
+                    ],
+                    "value": [
+                        "WD4PjIOk9y"
+                    ]
+                },
+                "info": {
+                    "x": 218,
+                    "y": 2810,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_modal_argument_by_name",
+                "inputs": {
+                    "action": "OSiE18QNMu",
+                    "interaction": "kkvuvACc09",
+                    "customid": "vAyVEvlD7k"
+                },
+                "options": {
+                    "customid": "hora"
+                },
+                "outputs": {
+                    "action": [
+                        "Y1nIBeeh7S"
+                    ],
+                    "value": [
+                        "R3n6CMsQVG"
+                    ]
+                },
+                "info": {
+                    "x": 222,
+                    "y": 3000,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            }
+        ],
+        "notes": [
+            {
+                "title": "Activacion del comando y mostrar Modal",
+                "description": "",
+                "color": "#00ff4c",
+                "x": 3,
+                "y": 2,
+                "width": 2078,
+                "height": 2205
+            },
+            {
+                "title": "Crear Categoria Partido",
+                "description": "",
+                "color": "#00ffd5",
+                "x": 2114,
+                "y": 0,
+                "width": 1960,
+                "height": 584
+            },
+            {
+                "title": "Rol de Arbitro",
+                "description": "",
+                "x": 4093,
+                "y": 0,
+                "width": 485,
+                "height": 275
+            },
+            {
+                "title": "Rol de Jugador",
+                "description": "",
+                "x": 4588,
+                "y": 4,
+                "width": 496,
+                "height": 268
+            },
+            {
+                "title": "Rol de Staff",
+                "description": "",
+                "x": 5094,
+                "y": 9,
+                "width": 483,
+                "height": 253
+            },
+            {
+                "title": "Rol de Presidente",
+                "description": "",
+                "x": 4096,
+                "y": 288,
+                "width": 459,
+                "height": 248
+            },
+            {
+                "title": "Rol de Sub-Presidente",
+                "description": "",
+                "x": 4585,
+                "y": 284,
+                "width": 466,
+                "height": 248
+            },
+            {
+                "title": "Crear Canales Categoria",
+                "description": "",
+                "color": "#fa00b7",
+                "x": 2102,
+                "y": 601,
+                "width": 3840,
+                "height": 580
+            },
+            {
+                "title": "Rol Equipo 1",
+                "description": "",
+                "x": 5076,
+                "y": 285,
+                "width": 505,
+                "height": 249
+            },
+            {
+                "title": "Rol Equipo 2",
+                "description": "",
+                "x": 5599,
+                "y": 15,
+                "width": 507,
+                "height": 249
+            },
+            {
+                "title": "Permisos Categoria",
+                "description": "",
+                "color": "#6600ff",
+                "x": 2097,
+                "y": 1193,
+                "width": 1120,
+                "height": 354
+            },
+            {
+                "title": "Permisos Info-partido",
+                "description": "",
+                "color": "#ff00d0",
+                "x": 2100,
+                "y": 1562,
+                "width": 1059,
+                "height": 582
+            },
+            {
+                "title": "Rol Realizador",
+                "description": "",
+                "x": 5601,
+                "y": 281,
+                "width": 581,
+                "height": 250
+            },
+            {
+                "title": "ROLES",
+                "description": "",
+                "x": 6262,
+                "y": 22,
+                "width": 512,
+                "height": 523
+            },
+            {
+                "title": "Perms Paneles",
+                "description": "",
+                "color": "#aeff00",
+                "x": 3173,
+                "y": 1560,
+                "width": 479,
+                "height": 568
+            },
+            {
+                "title": "Perms coach-azul",
+                "description": "",
+                "color": "#0011ff",
+                "x": 3672,
+                "y": 1558,
+                "width": 1598,
+                "height": 298
+            },
+            {
+                "title": "Perms coach-rojo",
+                "description": "",
+                "color": "#ff0000",
+                "x": 3663,
+                "y": 1863,
+                "width": 1607,
+                "height": 302
+            },
+            {
+                "title": "Perms panel-arbitro",
+                "description": "",
+                "color": "#00ffee",
+                "x": 3662,
+                "y": 2172,
+                "width": 1042,
+                "height": 298
+            },
+            {
+                "title": "Perms registro-partido",
+                "description": "",
+                "color": "#00ff11",
+                "x": 3667,
+                "y": 2481,
+                "width": 1472,
+                "height": 360
+            },
+            {
+                "title": "Perms chat-arbitros-partidos",
+                "description": "",
+                "x": 5790,
+                "y": 1561,
+                "width": 1149,
+                "height": 816
+            },
+            {
+                "title": "Perms Voz Azul",
+                "description": "",
+                "color": "#0011ff",
+                "x": 6849,
+                "y": 466,
+                "width": 4001,
+                "height": 471
+            },
+            {
+                "title": "Perms Voz Rojo",
+                "description": "",
+                "color": "#ff0000",
+                "x": 6849,
+                "y": 959,
+                "width": 3980,
+                "height": 474
+            },
+            {
+                "title": "Perms Voz",
+                "description": "",
+                "color": "#f0a400",
+                "x": 6313,
+                "y": 678,
+                "width": 478,
+                "height": 542
+            },
+            {
+                "title": "Perms chat-general",
+                "description": "",
+                "color": "#af85ff",
+                "x": 3230,
+                "y": 1201,
+                "width": 1574,
+                "height": 339
+            },
+            {
+                "title": "Como funcione esto XD",
+                "description": "",
+                "color": "#11ff00",
+                "x": 20,
+                "y": 2222,
+                "width": 2484,
+                "height": 991
+            }
+        ]
+    },
+    {
+        "id": "xi1xkwCJZD",
+        "active": true,
+        "info": {
+            "title": "Paneles",
+            "description": "",
+            "thumbnail": ""
+        },
+        "blocks": [
+            {
+                "name": "channel_create_event",
+                "inputs": {},
+                "options": {
+                    "unstable_outputs": "no"
+                },
+                "outputs": {
+                    "action": [
+                        "i1icX6YHaQ"
+                    ],
+                    "channel": [
+                        "PnC5ie9B5d",
+                        "33DNhTUyRU",
+                        "4PfHOzdZau",
+                        "atq6lJZeKZ",
+                        "z6Jdbk3oI8",
+                        "0mmkFGyNF8",
+                        "LoEdUlHvdx"
+                    ],
+                    "user": [],
+                    "reason": []
+                },
+                "info": {
+                    "x": 29,
+                    "y": 177,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "Check_Channeltype",
+                "inputs": {
+                    "action": "i1icX6YHaQ",
+                    "channel": "PnC5ie9B5d"
+                },
+                "options": {
+                    "channel_info": "1"
+                },
+                "outputs": {
+                    "action1": [
+                        "zDZ4OoX9GW"
+                    ],
+                    "action2": []
+                },
+                "info": {
+                    "x": 481,
+                    "y": 53,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_text_channel_info",
+                "inputs": {
+                    "action": "zDZ4OoX9GW",
+                    "text_channel": "33DNhTUyRU"
+                },
+                "options": {
+                    "text_channel_info": "13"
+                },
+                "outputs": {
+                    "action": [
+                        "UuKYvWmwNE"
+                    ],
+                    "result": [
+                        "rlEFw9U6H1",
+                        "YVCSsxZpSs",
+                        "ivA9Zox8No",
+                        "AOJBN1pJdd",
+                        "ygCp8qpU0T"
+                    ]
+                },
+                "info": {
+                    "x": 483,
+                    "y": 272,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "check_comparison",
+                "inputs": {
+                    "action": "UuKYvWmwNE",
+                    "value1": "rlEFw9U6H1",
+                    "value2": "OyxrXyUIHu"
+                },
+                "options": {
+                    "comparison_type": "equal",
+                    "value2": "coach-azul"
+                },
+                "outputs": {
+                    "action1": [
+                        "Aon9min6ND",
+                        "riZejPfZvr",
+                        "tn3NXALmUe"
+                    ],
+                    "action2": [
+                        "5lsu2oF5tB"
+                    ]
+                },
+                "info": {
+                    "x": 1010,
+                    "y": 32,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "check_comparison",
+                "inputs": {
+                    "action": "5lsu2oF5tB",
+                    "value1": "YVCSsxZpSs",
+                    "value2": "M8KCTsJqP5"
+                },
+                "options": {
+                    "comparison_type": "equal",
+                    "value2": "coach-rojo"
+                },
+                "outputs": {
+                    "action1": [
+                        "qbVfUKhHEH",
+                        "d3FIR60K9m",
+                        "yBGMm6jNCW"
+                    ],
+                    "action2": [
+                        "bv8XQW0Bl5"
+                    ]
+                },
+                "info": {
+                    "x": 1049,
+                    "y": 275,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "check_comparison",
+                "inputs": {
+                    "action": "r1UfB7y4Zt",
+                    "value1": "ivA9Zox8No",
+                    "value2": "r5Wtiw4pxA"
+                },
+                "options": {
+                    "comparison_type": "equal",
+                    "value2": "panel-arbitro"
+                },
+                "outputs": {
+                    "action1": [
+                        "dg8I6FFDQh",
+                        "Lpb4KbxR0x"
+                    ],
+                    "action2": []
+                },
+                "info": {
+                    "x": 59,
+                    "y": 568,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button_row",
+                "inputs": {
+                    "action": "na35SqVJlZ",
+                    "button1": "ANaVQRZHQl",
+                    "button2": "zfY3t0EtHP",
+                    "button3": "bQOoCn9vjP",
+                    "button4": "GrK61n7a6q",
+                    "button5": "Ocp9pM2EeZ"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "zfSFmmVWld",
+                        "Mrc9m85kY8"
+                    ],
+                    "row": [
+                        "ifmBLh97rs",
+                        "hxXMfXetXQ"
+                    ]
+                },
+                "info": {
+                    "x": 2567,
+                    "y": 458,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button_row",
+                "inputs": {
+                    "action": "OWjmDyUIT5",
+                    "button1": "HKClJHVemq",
+                    "button2": "KzNFRdtDkZ",
+                    "button3": "KTsY4hj9ex",
+                    "button4": "lf082b8FCG",
+                    "button5": "stbGtszYe0"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "eTN5LQ8WtT",
+                        "BtjQPkdAsr"
+                    ],
+                    "row": [
+                        "CwwuL7DT1d",
+                        "bRCj8XZwdb"
+                    ]
+                },
+                "info": {
+                    "x": 639,
+                    "y": 1210,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "8Lm7ms12VB",
+                    "styles": "JQTRO2rD64",
+                    "label": "892EYpvsG7",
+                    "emoji": "G7Va6WdlM3",
+                    "id": "jNiemu9xRh",
+                    "enable": "6KfRI19C17"
+                },
+                "options": {
+                    "styles": "primary",
+                    "label": "Obtener Comodín",
+                    "emoji": "",
+                    "id": "obtenercomodinazul",
+                    "enable": "enabled"
+                },
+                "outputs": {
+                    "action": [
+                        "HzdT8g2Egb"
+                    ],
+                    "button": [
+                        "ANaVQRZHQl"
+                    ]
+                },
+                "info": {
+                    "x": 1843,
+                    "y": 101,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "HzdT8g2Egb",
+                    "styles": "mqTRsW3eVm",
+                    "label": "XIurfHUhYv",
+                    "emoji": "8VrPSmvrSn",
+                    "id": "cAfOtmiIUc",
+                    "enable": "VIjN7PJntL"
+                },
+                "options": {
+                    "styles": "success",
+                    "label": "Usar Comodín",
+                    "emoji": "",
+                    "id": "usarcomodinazul",
+                    "enable": "disabled"
+                },
+                "outputs": {
+                    "action": [
+                        "djwzU8DmKZ"
+                    ],
+                    "button": [
+                        "zfY3t0EtHP"
+                    ]
+                },
+                "info": {
+                    "x": 1856,
+                    "y": 360,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "djwzU8DmKZ",
+                    "styles": "sGyKHjdf9n",
+                    "label": "VB1sRkYuff",
+                    "emoji": "3xwuyNfc0Z",
+                    "id": "sAMmYGlXzg",
+                    "enable": "35XYHKWW7C"
+                },
+                "options": {
+                    "styles": "danger",
+                    "label": "Pausa Táctica",
+                    "emoji": "",
+                    "id": "pedirpausaazul",
+                    "enable": "disabled"
+                },
+                "outputs": {
+                    "action": [
+                        "na35SqVJlZ"
+                    ],
+                    "button": [
+                        "bQOoCn9vjP"
+                    ]
+                },
+                "info": {
+                    "x": 1862,
+                    "y": 603,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "Lpb4KbxR0x",
+                    "styles": "5JYGS5oT2n",
+                    "label": "YELzLfPFwA",
+                    "emoji": "aYMf8fG3K5",
+                    "id": "vpl7alC06d",
+                    "enable": "fTeQ0FxHjl"
+                },
+                "options": {
+                    "styles": "success",
+                    "label": "Tarjeta Amarilla",
+                    "emoji": "",
+                    "id": "tarjamarilla",
+                    "enable": "enabled"
+                },
+                "outputs": {
+                    "action": [
+                        "oqBBfV5A1n"
+                    ],
+                    "button": [
+                        "HKClJHVemq"
+                    ]
+                },
+                "info": {
+                    "x": 43,
+                    "y": 976,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "oqBBfV5A1n",
+                    "styles": "3HGadzZe9R",
+                    "label": "nuaKfA8mEH",
+                    "emoji": "VHNrS4Alzd",
+                    "id": "dwgB6zMZdR",
+                    "enable": "gAwZWS8tg3"
+                },
+                "options": {
+                    "styles": "primary",
+                    "label": "Tarjeta Naranja",
+                    "emoji": "",
+                    "id": "tarjnaranja",
+                    "enable": "enabled"
+                },
+                "outputs": {
+                    "action": [
+                        "H1pj80rQ8i"
+                    ],
+                    "button": [
+                        "KzNFRdtDkZ"
+                    ]
+                },
+                "info": {
+                    "x": 43,
+                    "y": 1217,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "create_button",
+                "inputs": {
+                    "action": "H1pj80rQ8i",
+                    "styles": "z4QxXhbZPI",
+                    "label": "m4wwpcHrrV",
+                    "emoji": "eMENiVqUf3",
+                    "id": "MFyrOuQKf3",
+                    "enable": "Zg45Xywyhx"
+                },
+                "options": {
+                    "styles": "danger",
+                    "label": "Tarjeta Roja",
+                    "emoji": "",
+                    "id": "tarjroja",
+                    "enable": "enabled"
+                },
+                "outputs": {
+                    "action": [
+                        "OWjmDyUIT5"
+                    ],
+                    "button": [
+                        "KTsY4hj9ex"
+                    ]
+                },
+                "info": {
+                    "x": 43,
+                    "y": 1466,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "send_message_component",
+                "inputs": {
+                    "action": "Mrc9m85kY8",
+                    "channel": "z6Jdbk3oI8",
+                    "text": "ZyCWs7hayP",
+                    "embed": "8XfJQakvfm",
+                    "row1": "hxXMfXetXQ",
+                    "row2": "ChpsvEHQ9a",
+                    "row3": "COodRMQT6E",
+                    "row4": "svOzc5MWeO",
+                    "row5": "L5McUj3nCA",
+                    "file": "kSaG7gBeuI"
+                },
+                "options": {
+                    "type": "send",
+                    "silent": "true"
+                },
+                "outputs": {
+                    "action": [],
+                    "message": []
+                },
+                "info": {
+                    "x": 2968,
+                    "y": 408,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_2x",
+                "inputs": {},
+                "options": {
+                    "text1": "Estos botones son de uso exclusivo para el coach del equipo.\n\n**Siempre esperar la orden de un árbitro antes de utilizar el panel**\n\n***No usar como jugador***",
+                    "text2": "Estos botones son de uso exclusivo para los árbitros de un partido.\n\n**Usar con cautela**"
+                },
+                "outputs": {
+                    "text1": [
+                        "ZyCWs7hayP",
+                        "gKC2GfTGfL"
+                    ],
+                    "text2": [
+                        "XPvN71LVzo"
+                    ]
+                },
+                "info": {
+                    "x": 2427,
+                    "y": 1153,
+                    "z": 0,
+                    "width": 0,
+                    "height": 417,
+                    "color": ""
+                }
+            },
+            {
+                "name": "send_message_component",
+                "inputs": {
+                    "action": "BtjQPkdAsr",
+                    "channel": "0mmkFGyNF8",
+                    "text": "XPvN71LVzo",
+                    "embed": "QvUGzkE0Hk",
+                    "row1": "bRCj8XZwdb",
+                    "row2": "R00WE2P9WZ",
+                    "row3": "jLHEKfpekI",
+                    "row4": "9GOMidO3Fk",
+                    "row5": "E07oZn1SQM",
+                    "file": "l12v0v1HTk"
+                },
+                "options": {
+                    "type": "send",
+                    "silent": "true"
+                },
+                "outputs": {
+                    "action": [],
+                    "message": []
+                },
+                "info": {
+                    "x": 1103,
+                    "y": 1153,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "merge_actions",
+                "inputs": {
+                    "action": [
+                        "tn3NXALmUe",
+                        "yBGMm6jNCW"
+                    ]
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "8Lm7ms12VB"
+                    ]
+                },
+                "info": {
+                    "x": 1570,
+                    "y": 65,
+                    "z": 0,
+                    "width": 235,
+                    "height": 112,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_variable",
+                "inputs": {
+                    "action": "bv8XQW0Bl5",
+                    "name": "midk799jZ9",
+                    "workspace_index": "MgmdXXOOr3"
+                },
+                "options": {
+                    "variable_type": "global",
+                    "variable_restriction_type": "all"
+                },
+                "outputs": {
+                    "action": [
+                        "jXIcAVS5fE",
+                        "tdbjuWGdWi",
+                        "VyvYd7BLnW"
+                    ],
+                    "value": [
+                        "3VYz40fqp0",
+                        "mawrF5hK0i",
+                        "rYpml28u57",
+                        "i0lEmXjVZl"
+                    ]
+                },
+                "info": {
+                    "x": 1218,
+                    "y": 479,
+                    "z": 0,
+                    "width": 0,
+                    "height": 172,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_12x",
+                "inputs": {},
+                "options": {
+                    "text1": "formulario",
+                    "text2": "equipo1",
+                    "text3": "",
+                    "text4": "",
+                    "text5": "",
+                    "text6": "",
+                    "text7": "",
+                    "text8": "",
+                    "text9": "",
+                    "text10": "",
+                    "text11": "",
+                    "text12": ""
+                },
+                "outputs": {
+                    "text1": [
+                        "midk799jZ9"
+                    ],
+                    "text2": [
+                        "Chs32qVhLv"
+                    ],
+                    "text3": [],
+                    "text4": [],
+                    "text5": [],
+                    "text6": [],
+                    "text7": [],
+                    "text8": [],
+                    "text9": [],
+                    "text10": [],
+                    "text11": [],
+                    "text12": []
+                },
+                "info": {
+                    "x": 1441.7031478881838,
+                    "y": 716.8593788146974,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "get_property_from_object",
+                "inputs": {
+                    "action": "VyvYd7BLnW",
+                    "object": "i0lEmXjVZl",
+                    "key": "Chs32qVhLv"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "ZM6D1Q8NON"
+                    ],
+                    "value": [
+                        "2N0BbWXlXu"
+                    ]
+                },
+                "info": {
+                    "x": 1032,
+                    "y": 673,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "console_logX",
+                "inputs": {
+                    "action": "ZM6D1Q8NON",
+                    "value": "2N0BbWXlXu"
+                },
+                "options": {},
+                "outputs": {
+                    "action": [
+                        "r1UfB7y4Zt"
+                    ]
+                },
+                "info": {
+                    "x": 773,
+                    "y": 549,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            }
+        ],
+        "notes": [
+            {
+                "title": "Comprobacion de canal creado",
+                "description": "",
+                "color": "#00ffaa",
+                "x": 3,
+                "y": 6,
+                "width": 1661,
+                "height": 777
+            },
+            {
+                "title": "Botones Panel Coach",
+                "description": "",
+                "color": "#fff700",
+                "x": 1786,
+                "y": 8,
+                "width": 1687,
+                "height": 899
+            },
+            {
+                "title": "Botones Panel Arbitro",
+                "description": "",
+                "color": "#00ffee",
+                "x": 11,
+                "y": 897,
+                "width": 1599,
+                "height": 846
+            }
+        ]
+    },
+    {
+        "id": "nev3jjtQHq",
+        "active": true,
+        "info": {
+            "title": "Interacciones Coach",
+            "description": "",
+            "thumbnail": ""
+        },
+        "blocks": [
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "zVDJrLmtbL",
+                    "sub": "WI6p59Nmc6",
+                    "group": "KbLOMqkRwF",
+                    "value": "0Z4CDkRYzm"
+                },
+                "options": {
+                    "type": "button",
+                    "id": "pedirpausaazul",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 49,
+                    "y": 1107,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "30xxe4252R",
+                    "sub": "kZWiQcIpJs",
+                    "group": "HkFgyqrnrb",
+                    "value": "m0xr1bzZXj"
+                },
+                "options": {
+                    "type": "button",
+                    "id": "usarcomodinazul",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "3ogtXbVozB"
+                    ],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 47,
+                    "y": 78,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "UYHfVdkej4",
+                    "sub": "z4kOc4UlBx",
+                    "group": "shxgQfsVDH",
+                    "value": "erdr4KCltX"
+                },
+                "options": {
+                    "type": "button",
+                    "id": "usarcomodinrojo",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [
+                        "1kIXhQRa5V"
+                    ],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 47,
+                    "y": 533,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "3ogtXbVozB",
+                    "name": "8tU6uCVL0x",
+                    "value": "6WmzIAfIXS",
+                    "workspace_index": "8UDgazAxMS"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "global",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 698,
+                    "y": 153,
+                    "z": 0,
+                    "width": 0,
+                    "height": 219,
+                    "color": ""
+                }
+            },
+            {
+                "name": "text_3x",
+                "inputs": {},
+                "options": {
+                    "text1": "equipo",
+                    "text2": "azul",
+                    "text3": "rojo"
+                },
+                "outputs": {
+                    "text1": [
+                        "8tU6uCVL0x",
+                        "nkUuCyNsAt",
+                        "VkIauWtQ96",
+                        "CxNUJek0A4",
+                        "GWYZBONoP5",
+                        "wdqALiVPV6"
+                    ],
+                    "text2": [
+                        "6WmzIAfIXS",
+                        "8bhOkhwJhg",
+                        "z25RW8KTPi"
+                    ],
+                    "text3": [
+                        "avBykA3YeM",
+                        "t8pN5rZwQr",
+                        "7gBH3JFxzQ"
+                    ]
+                },
+                "info": {
+                    "x": 147,
+                    "y": 2071,
+                    "z": 0,
+                    "width": 0,
+                    "height": 244,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "1kIXhQRa5V",
+                    "name": "nkUuCyNsAt",
+                    "value": "avBykA3YeM",
+                    "workspace_index": "j2D8HayJnO"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "global",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 717,
+                    "y": 651,
+                    "z": 0,
+                    "width": 0,
+                    "height": 213,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "8FOdRf6Gal",
+                    "sub": "Zq51wNOY8p",
+                    "group": "3iUDGuI5po",
+                    "value": "tQqxXa727J"
+                },
+                "options": {
+                    "type": "slash",
+                    "id": "pedirpausarojo",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 49,
+                    "y": 1545,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "ohY96ntAzZ",
+                    "sub": "aqXIOKsH2M",
+                    "group": "XJjXMCre2N",
+                    "value": "HeYCfRlUtR"
+                },
+                "options": {
+                    "type": "slash",
+                    "id": "obtenercomodinrojo",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 70,
+                    "y": 2832,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "interaction_event",
+                "inputs": {
+                    "id": "WSm4jINw29",
+                    "sub": "e0eMhePARp",
+                    "group": "1WtgVJKIVL",
+                    "value": "IoatYuXCcS"
+                },
+                "options": {
+                    "type": "slash",
+                    "id": "obtenercomodinazul",
+                    "sub": "",
+                    "group": "",
+                    "value": ""
+                },
+                "outputs": {
+                    "action": [],
+                    "user": [],
+                    "member": [],
+                    "server": [],
+                    "channel": [],
+                    "message": [],
+                    "interaction": [],
+                    "args": [],
+                    "name": [],
+                    "menuvalues": [],
+                    "subcommandname": [],
+                    "subcommandgroup": []
+                },
+                "info": {
+                    "x": 70,
+                    "y": 2406,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "PocJ9FVQbW",
+                    "name": "VkIauWtQ96",
+                    "value": "z25RW8KTPi",
+                    "workspace_index": "6XEHI3nnpO"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "temp",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 729,
+                    "y": 1231,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "XY1y2jhF3K",
+                    "name": "CxNUJek0A4",
+                    "value": "7gBH3JFxzQ",
+                    "workspace_index": "OGiox3ouDY"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "temp",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 735,
+                    "y": 1655,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "dJ0UGP9nhy",
+                    "name": "GWYZBONoP5",
+                    "value": "8bhOkhwJhg",
+                    "workspace_index": "WxSPLD9eJK"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "temp",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 722,
+                    "y": 2512,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            },
+            {
+                "name": "control_variable",
+                "inputs": {
+                    "action": "eQ7pHnWHC1",
+                    "name": "wdqALiVPV6",
+                    "value": "t8pN5rZwQr",
+                    "workspace_index": "YoHkBsz5e1"
+                },
+                "options": {
+                    "action_type": "set",
+                    "variable_type": "temp",
+                    "variable_restriction_type": "current"
+                },
+                "outputs": {
+                    "action": []
+                },
+                "info": {
+                    "x": 767,
+                    "y": 2974,
+                    "z": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": ""
+                }
+            }
+        ],
+        "notes": []
+    }
+]
