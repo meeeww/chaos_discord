@@ -20,6 +20,7 @@
         "mysql2": "^3.6.5",
         "node-fetch": "^2.7.0",
         "play-dl": "^1.9.7",
-        "semver": "^7.3.8"
+        "semver": "^7.3.8",
+        "weighted": "^1.0.0"
     }
 }

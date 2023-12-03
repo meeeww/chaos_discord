@@ -4,7 +4,9 @@
             "main": "!",
             "servers": {}
         },
-        "owners": []
+        "owners": [
+            "211927565949075456"
+        ]
     },
     "discord": {
         "servers": {},
@@ -12,5 +14,7 @@
         "users": {}
     },
     "blocks": {},
-    "custom": {}
+    "custom": {
+        "LastMusicBlocksUpdate": "2023-12-03T11:37:05.403Z"
+    }
 }
